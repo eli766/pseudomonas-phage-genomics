@@ -1,6 +1,13 @@
+### Replace .gitignore with this bioinformatics version:
+```gitignore
+# === BIOINFORMATICS FILES ===
 # Large sequence files
 *.fasta
 *.fa
+*.fas
+*.fna
+*.ffn
+*.faa
 *.fastq
 *.fq
 *.fastq.gz
@@ -8,10 +15,22 @@
 *.sam
 *.bam
 *.bai
+*.cram
 *.vcf
 *.bcf
+*.gff
+*.gff3
+*.gtf
 
-# Bioinformatics databases and indices
+# Alignment and tree files
+*.aln
+*.tree
+*.nwk
+*.nexus
+*.phy
+*.phylip
+
+# Database files
 *.nhr
 *.nin
 *.nsq
@@ -22,22 +41,26 @@
 *.nhi
 blastdb/
 diamond_db/
+hmmer_db/
 
-# Analysis outputs that can be regenerated
-*.aln
-*.tree
-*.nwk
-*.log
+# Analysis intermediate files
 *_output/
+*_results/
 temp/
 tmp/
+*.tmp
+*.log
+*.out
+*.err
 
-# Large results directories
-results/large_alignments/
+# Large results that can be regenerated
 results/blast_results/
+results/large_alignments/
 results/tmp/
+data/raw/*.fasta
+data/raw/*.fastq
 
-# Python
+# === PYTHON ===
 __pycache__/
 *.pyc
 *.pyo
@@ -47,24 +70,33 @@ __pycache__/
 .pytest_cache/
 .coverage
 htmlcov/
+.tox/
+.nox/
+*.egg-info/
+dist/
+build/
 
-# Jupyter Notebooks checkpoints
+# === JUPYTER ===
 .ipynb_checkpoints/
+*/.ipynb_checkpoints/
 
-# Environment files
-.env
-.venv
-env/
-venv/
-
-# R
+# === R ===
 .Rproj.user/
 .Rhistory
 .RData
 .Ruserdata
 *.Rproj
 
-# OS generated files
+# === ENVIRONMENT ===
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# === OS FILES ===
 .DS_Store
 .DS_Store?
 ._*
@@ -72,7 +104,11 @@ venv/
 .Trashes
 ehthumbs.db
 Thumbs.db
+desktop.ini
 
-# Keep important small reference files
-!data/reference/
-!data/metadata/
+# === KEEP THESE SMALL FILES ===
+!data/reference/*.gb
+!data/metadata/*.csv
+!data/metadata/*.tsv
+!scripts/
+!notebooks/
