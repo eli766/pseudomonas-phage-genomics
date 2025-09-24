@@ -62,3 +62,24 @@ pip install pharokka
 
 # 4. Start analysis
 jupyter lab notebooks/01-data-retrieval.ipynb
+🤝 Contributing
+
+Fork the repository
+Create feature branch: git checkout -b feature/new-analysis
+Commit changes: git commit -m 'Add new analysis'
+Push to branch: git push origin feature/new-analysis
+Submit pull request
+
+📚 Key References
+
+Musila et al. (2024) - Kenyan phage genomes: PP456877, PP456878, PP456879
+Pirnay et al. (2021) - Phage therapy solutions for AMR
+Omwega et al. (2021) - Kenyan wastewater phage isolation
+
+📄 License
+This project is licensed under the MIT License - see LICENSE file.
+👥 Team
+
+Name: Elkana Mudi 
+Institution: PHTRP
+Contact: ellycanamoody@gmail.com
